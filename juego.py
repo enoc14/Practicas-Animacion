@@ -22,13 +22,6 @@ class Juego(ShowBase):
         self.ralph_escape = addInstructions(.06, "[ESC]: Para Salir")
         self.ralph_run = addInstructions(.12, "[A]: Para Empezar Juego")
 
-        """self.Ralph = Actor("models/lomito") 
-        self.Ralph.setScale(.5, .5, .5)
-        self.Ralph.reparentTo(self.render)
-        self.Ralph.setPos(0, 10, -1)
-        self.Ralph.setHpr(-90,5,15)"""
-        #self.Ralph.listJoints()
-
         # Variables globales para el control
         self.arrayGlobal = []
         self.sonidoGlobal = -1
@@ -46,11 +39,11 @@ class Juego(ShowBase):
         self.arrayImages = [self.Perro, self.Caballo, self.Leon, self.Gato, self.Elefante, self.Oveja]
 
         # Carga de audio
+        self.audioElefante = loader.loadSfx("src/sounds/Dog.mp3")
         self.audioPerro = loader.loadSfx("src/sounds/Dog.mp3")
-        self.audioCaballo = loader.loadSfx("src/sounds/Dog.mp3")
+        self.audioCaballo = loader.loadSfx("src/sounds/Horse.mp3")
         self.audioLeon = loader.loadSfx("src/sounds/Lion.mp3")
-        self.audioGato = loader.loadSfx("src/sounds/Dog.mp3")
-        self.audioElefante = loader.loadSfx("src/sounds/Elephant.wav")
+        self.audioGato = loader.loadSfx("src/sounds/Cat.mp3")
         self.audioOveja = loader.loadSfx("src/sounds/Sheep.mp3")
         self.arrayAudios = [self.audioPerro, self.audioCaballo, self.audioLeon, self.audioGato, self.audioElefante, self.audioOveja]
 
